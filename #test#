@@ -1,0 +1,7 @@
+			
+			(flet (	
+       (	funcname       (arg))
+        (arg  +	        10)    
+      )	      
+  (funcn			ame(10))	
+)											

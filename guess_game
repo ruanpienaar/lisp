@@ -1,0 +1,58 @@
+(defparameter *small* 1)
+(defparameter *big* 100)
+
+(defun guess-my-number () 
+	(ash (+ *small* *big*) -1) )
+
+(defun smaller () 􏰁
+	(defparameter *big* (1- (guess-my-number)) ) 􏰂
+	(guess-my-number)) 
+
+(defun bigger () 􏰁
+	(defparameter *small* (1+ (guess-my-number)) )
+	(guess-my-number))
+
+(defun start-over () 
+	(defparameter *small* 1) 
+	(defparameter *big* 100)
+	(guess-my-number) )
+
+
+(flet (
+	(function_name (args)
+	  (+ args 1) )
+      )
+     (function_name 2)
+)
+
+(flet (
+	(double (num)
+	  (* 2 num)
+	)
+	(halve (num)
+	  (/ num 2)
+	)
+      )
+	(+ (double 4) (halve 8))
+)
+
+( labels (
+	  ( addtwo (addnum)
+		(+ addnum 2))
+
+	  ( mintwo (minnum)
+		(- addnum 2))
+	)
+  (+ ( addtwo 8 ) ( mintwo 12 ))
+	
+)
+
+(labels ((a (n)
+            (+ n 5))
+         (b (n)
+            (+ (a n) 6)))
+      (b 10))
+	  
+(defun square (n)
+       ( * n n )
+)
